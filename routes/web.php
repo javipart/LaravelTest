@@ -12,7 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('app.begin');
+})->name('home');
 
-Route::get('/ejemplo', 'ControllExample@begin');
+Route::get('/one', function() {
+    return view('app.view_one');
+})->name('one');
+
+Route::get('/two', function() {
+    return view('app.view_two');
+})->name('two');
